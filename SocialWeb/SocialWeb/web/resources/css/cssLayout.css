@@ -1,0 +1,86 @@
+#logo {
+    color: #FFFFFF;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 64px;
+    height: 100px;
+    letter-spacing: -1px;
+    margin: 0;
+    padding: 0px;
+    padding-left: 30px;
+    text-align: center;
+    text-shadow: #808080 -1px 1px 2px;
+}
+
+#tudo {
+    width: 700px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+    
+#top {
+    position: relative;
+    color: black;
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+}
+#menuleft {
+    text-align: left;
+    font-size: 15px;
+}
+
+#bottom {
+    position: relative;
+    background-color: #c2dfef;
+    padding: 5px;
+    margin: 10px 0px 0px 0px;
+}
+
+#left {
+    float: left;
+    background-color: #ece3a5;
+    padding: 5px;
+    width: 150px;
+}
+
+#right {
+    float: right;
+    background-color: #ece3a5;
+    padding: 5px;
+    width: 150px;
+}
+
+.center_content {
+    position: relative;
+    background-color: #dddddd;
+    padding: 5px;
+    text-align: center;
+}
+
+.left_content {
+    background-color: #dddddd;
+    padding: 5px;
+    margin-left: 170px;
+}
+
+.right_content {
+    background-color: #dddddd;
+    padding: 5px;
+    margin: 0px 170px 0px 170px;
+}
+
+#top a:link, #top a:visited {
+  color: black;
+  text-decoration: none;
+  font-family: Arial, Narrow;
+  font-weight: bold;
+  
+}
+
+#top a:link:hover, #top a:visited:hover  {
+  color: black;
+  text-decoration : underline;
+  font-family: Arial, Narrow;
+  font-weight: bold;
+}
+

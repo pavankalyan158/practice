@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="#{facesContext.externalContext.requestContextPath}/resources/css/default.css" rel="stylesheet" type="text/css" />
+        <link href="#{facesContext.externalContext.requestContextPath}/resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
+        <title><h:outputText value="SocialWeb - Assistencia Social UFSCAR"/><ui:insert name="title" /></title>
+        <ui:insert name="script"></ui:insert>
+    </h:head>
+
+    <h:body>
+
+        <div id="tudo">
+            <div id="logo">
+                <h1> Social Web </h1>
+                <h1> Controle de Bolsas UFSCAR </h1>
+            </div>
+            <div id="top">
+                <h:form id="formTemplate">
+                    <p:tabView id="tabView">  
+
+                        <p:tab id="tab1" title="Assistente Social">  
+                            <div id="menuleft">   
+                            <h:commandButton action="#{assistenteManagedBean.montarPaginaParaInsercao}" value="Cadastro de Assistentes"/><br/>
+                            <h:commandButton action="#{assistenteManagedBean.listar}" value="Listar Assistentes" /><br/>
+                            </div>
+                        </p:tab>  
+
+                        <p:tab id="tab2" title="Alunos">  
+                            <div id="menuleft">   
+                            <h:commandButton action="#" value="Cadastro de Alunos"/><br/>
+                            <h:commandButton action="#" value="Listar Alunos" /><br/>
+                            </div>
+                        </p:tab>  
+                        <p:tab id="tab3" title="Bolsas">  
+                            <div id="menuleft">   
+                            <h:commandButton action="#" value="Cadastro de Bolsas"/><br/>
+                            <h:commandButton action="#" value="Listar Bolsas" /><br/>
+                            </div>
+                        </p:tab>  
+                         <p:tab id="tab4" title="Edital">  
+                            <div id="menuleft">   
+                            <h:commandButton action="#" value="Cadastro de Edital"/><br/>
+                            <h:commandButton action="#" value="Listar Edital" /><br/>
+                            </div>
+                        </p:tab>  
+
+                    </p:tabView>                     
+                    
+                </h:form>
+            </div>
+
+            <div id="content" class="center">
+                <ui:insert name="content"></ui:insert>
+            </div>
+
+            <div id="bottom" class="center_content">
+                <ui:insert name="bottom">
+                    <p:panel>
+                        <h:outputText value="Curso de P&oacute;s-Gradua&ccedil;&atilde;o Lato Sensu em Computa&ccedil;&atilde;o - Desenvolvimento de Software para Web" />
+                    </p:panel>
+                </ui:insert>
+            </div>
+        </div>
+
+    </h:body>
+
+</html>

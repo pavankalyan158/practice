@@ -1,0 +1,12 @@
+
+copiar todas as bibliotecas de relatorio
+para dentro da pasta lib do projeto webapps
+
+
+C:\Program Files (x86)\Jaspersoft\iReport-4.7.1\ireport\modules\ext
+pasta com bliotecas de relatorio do jasper
+
+
+C:\apache-tomcat-6.0.29\webapps\4bim\WEB-INF\lib
+pasta lib de projeto do apache que deve conter as bibliotecas
+

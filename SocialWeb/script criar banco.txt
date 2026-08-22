@@ -1,0 +1,11 @@
+create table Assistente_Social(
+Cod_Assistente int not null,
+Nome varchar(80) not null,
+cpf varchar(20) not null,
+Registro_Func varchar(80),
+Constraint pk_Assistente_social primary key(Cod_Assistente)
+)
+
+create sequence sq_assistente_social
+
+alter table assistente_social alter column Cod_Assistente set default nextval('sq_assistente_social'::regclass)

@@ -1,0 +1,21 @@
+VARIAVEIS AMBIENTE SISTEMA
+CLASS_PATH
+%JAVA_HOME%\bin;%JAVA_HOME%\jre\lib\ext;
+
+
+CATALINA_HOME
+C:\apache-tomcat-6.0.29
+
+JAVA_HOME
+C:\Program Files (x86)\Java\jdk1.6.0_20
+
+Path
+..........;%JAVA_HOME%\bin;
+
+copiar bancosql.java na pasta work que nao existe!!!!!!!!!!!!!
+
+C:\apache-tomcat-6.0.29\work\Catalina\localhost\castro2017(nome do projeto criado)
+
+colar o arquivo bancosql.java
+e compilar para o projeto
+

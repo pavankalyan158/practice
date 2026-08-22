@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
+    <body>
+
+         <ui:composition template="./../newTemplate.xhtml">
+
+            <ui:define name="title">Listar Assistente Social</ui:define>
+
+            <ui:define name="content">
+                <h:form>
+                    <p:panel header="Listar Assistente Social">
+                        <h:panelGrid>
+                            <h:outputText value="Não existem assistentes cadastradas" rendered="#{empty assistenteManagedBean.assistenteLista}" />
+
+                            <p:dataTable value="#{assistenteManagedBean.assistenteLista}" var="assistente" paginator="true" rows="10" rendered="#{not empty assistenteManagedBean.assistenteLista}">
+                                <p:column sortBy="#{assistente.nome}" filterBy="#{assistente.nome}">
+                                    <f:facet name="header">
+                                        <h:outputText value="Nome" />
+                                    </f:facet>
+                                    <h:outputText value="#{assistente.nome}" />
+                                </p:column>
+                                <p:column sortBy="#{assistente.cpf}" filterBy="#{assistente.cpf}">
+                                    <f:facet name="header">
+                                        <h:outputText value="CPF" />
+                                    </f:facet>
+                                    <h:outputText value="#{assistente.cpf}" />
+                                </p:column>
+                                <p:column sortBy="#{assistente.registroFunc}" filterBy="#{assistente.registroFunc}">
+                                    <f:facet name="header">
+                                        <h:outputText value="Registro Funcionario"/>
+                                    </f:facet>
+                                    <h:outputText value="#{assistente.registroFunc}" />
+                                </p:column>
+                                <p:column>
+                                    <f:facet name="header">
+                                        <h:outputText value="&nbsp;"/>
+                                    </f:facet>
+                                    <h:commandLink action="#{assistenteManagedBean.montarPaginaParaAlteracao}" value="Alterar">
+                                        <f:setPropertyActionListener value="#{assistente}" target="#{assistenteManagedBean.assistenteSocial}" />  
+                                    </h:commandLink>
+                                    <h:outputText value="&nbsp;"/>
+                                    <h:commandLink action="#{assistenteManagedBean.montarPaginaParaExclusao}" value="Excluir">
+                                        <f:setPropertyActionListener value="#{assistente}" target="#{assistenteManagedBean.assistenteSocial}" />  
+                                    </h:commandLink>                                     
+                                </p:column>
+                            </p:dataTable>
+
+                            <h:commandButton id="cancelar" action="/Principal" value="Cancelar" />
+                        </h:panelGrid>
+                    </p:panel>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html> 
